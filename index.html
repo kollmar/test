@@ -2,15 +2,19 @@
 <head>
 	<title>Bower Test</title>
 </head>
-<body>
+<body ng-app="myApp" ng-init="name='Andre'">
 	Das ist der Bower-Test 1
-
+	<p>{{name}}</p>
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function (){
 
-			alert('Geht');
-		});
+		var myApp = angular/**
+		*  Module
+		*
+		* Description
+		*/
+		.module('myApp', []);
 	</script>
 </body>
 </html>
