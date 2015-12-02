@@ -1,0 +1,118 @@
+body {
+	color: #black;
+}
+
+ul {
+	margin: 0; 
+	padding: 0;
+	-webkit-padding-start: 0;
+}
+
+a {
+	color: inherit;
+
+}
+
+nav {
+	position: relative;
+}
+
+nav > div {
+	padding: 12px;
+	background-color: #4285F4;
+	text-align: center;
+	position: absolute;
+	z-index: 11;
+	width: 100%;
+	height: 65px;
+	/*box-shadow: 0 1px 4px rgba(0,0,0,0.3);*/
+	opacity: 1;
+	transition: all linear 0.5s;
+}
+
+nav > div > i {
+	cursor: pointer;
+	color: rgba(0,0,0,0.38);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+nav > div.ng-hide {
+	opacity: 0;
+}
+
+header {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	color: white;
+	background-color: #4285F4;
+	width: 100%;
+	height: 65px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+li:before{
+	font-family: "FontAwesome"
+}	
+
+nav > ul > li{
+	/*list-style: none;*/
+	float: left;
+}
+
+.menu-right > ul > li {
+	float: left;
+	padding: 0 10px 0 10px;
+}
+
+nav > ul > li:last-child{
+	float: right;
+
+}
+
+.menu-left > a {
+	font-size: 16px;
+}
+
+.menu-left > a:before {
+	font-family: "FontAwesome";
+	content: "\f039";
+	padding: 0 10px 0 10px;
+}
+
+.menu-right > ul > li:before {
+	padding: 0 10px 0 10px;
+}
+
+
+.menu-right > ul > li:first-child:before {
+	/*font-family: "FontAwesome";*/
+	content: "\f002";
+	cursor: pointer;
+}
+.menu-right > ul > li:nth-child(2):before {
+	/*font-family: "FontAwesome";*/
+	content: "\f003";
+}
+.menu-right > ul > li:nth-child(3):before {
+	/*font-family: "FontAwesome";*/
+	content: "\f0a2";
+}
+.menu-right > ul > li:nth-child(4):before {
+	/*font-family: "FontAwesome";*/
+	content: "\f0ca";
+}
+.menu-right > ul > li:nth-child(5):before {
+	/*font-family: "FontAwesome";*/
+	content: "\f0ae";
+}
+.menu-right > ul > li:nth-child(6):before {
+	/*font-family: "FontAwesome";*/
+	content: "\f1de";
+}
+.menu-right > ul > li:nth-child(7):before {
+	/*font-family: "FontAwesome";*/
+	content: "\f038";
+}

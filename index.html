@@ -1,10 +1,38 @@
 <html>
 <head>
 	<title>Bower Test</title>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="media/css/main.css">
 </head>
-<body ng-app="myApp" ng-init="name='Andre'">
-	Das ist der Bower-Test 1
-	<p>{{name}}</p>
+<body ng-app="myApp" ng-init="name='Andre'" class="animated fadeInDown">
+	<header ng-controller="hCtrl">
+		<nav>
+			<ul ng-menulist>
+				<li class="menu-left"><a href="#">Material Design</a></li>
+				<li class="menu-right">
+					<ul>
+						<li ng-click="showSearch =! showSearch">Search</li>
+						<li>Message</li>
+						<li>Alert</li>
+						<li>Tasks</li>
+						<li>Settings</li>
+						<li>Sidelist</li>
+					</ul>
+				</li>				
+			</ul>
+			<div id="topSearch" ng-show="showSearch">
+				<input type="search" />
+				<i data-ng-closeSearch id="close" ng-click="showSearch =! showSearch">x</i>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<p>Das ist der Bower-Test 1</p>
+		<p>{{name}}</p>
+	</main>
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
 	<script type="text/javascript">
@@ -15,6 +43,11 @@
 		* Description
 		*/
 		.module('myApp', []);
+
+		myApp.controller('hCtrl', function($scope){
+			$scope.showSearch = false;
+
+		});
 	</script>
 </body>
 </html>
