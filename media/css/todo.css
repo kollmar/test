@@ -1,0 +1,51 @@
+body {
+	text-align: center;
+	width: 100%;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+/*button {
+	color: white;
+	background-color: #F44336;
+}*/
+
+h1 {
+	font-size: 3.0em;
+}
+
+ul {
+	width: 200px;
+	margin: 0 auto;
+}
+
+ul > li {
+	list-style: none;
+	margin: 10px 0;
+}
+
+li > span {
+  float: right;
+  cursor: pointer;
+}
+
+.fade {
+  transition: 1s linear all;
+  -webkit-transition: 1s linear all;
+}
+
+.fade.ng-enter {
+  opacity: 0;
+}
+
+.fade.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.fade.ng-leave {
+  opacity: 1;
+}
+
+.fade.ng-leave.ng-leave-active {
+  opacity: 0;
+}

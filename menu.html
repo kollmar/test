@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>menu</title>
+	<link rel="stylesheet" type="text/css" href="media/css/menu.css">
+</head>
+<body ng-app="menu" ng-init="searchOpen=true">
+	<header id="menuTest">
+		<nav>
+			<ul>
+				<li ng-click="searchOpen != searchOpen">X</li>
+			</ul>
+		</nav>
+		<div id="searchbar">
+			<div>
+				<form>
+					<input type="search"></input>
+				</form>
+			</div>
+		</div>
+	</header>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
+
+
+<script type="text/javascript">
+	/**
+	* menu Module
+	*
+	* Description
+	*/
+	angular.module('menu', 
+		['ngAnimate']);
+</script>
+
+</body>
+</html>

@@ -35,6 +35,7 @@
 	</main>
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
 	<script type="text/javascript">
 
 		var myApp = angular/**
@@ -42,7 +43,7 @@
 		*
 		* Description
 		*/
-		.module('myApp', []);
+		.module('myApp', ['ngAnimate']);
 
 		myApp.controller('hCtrl', function($scope){
 			$scope.showSearch = false;

@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>ToDo-Liste</title>
+	<meta view="">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="media/css/todo.css">
+</head>
+<body ng-app="todoapp">
+<header>
+	<nav>
+		<ul>	
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</nav>
+</header>
+<main data-ng-controller="itemCtrl">
+	<section>
+		<h1>ToDo-List</h1>	
+	</section>
+	<section>		
+		<ul >
+			<li ng-repeat="item in items" class="fade">{{item.name}}
+				<span ng-click="removeItem($index)">X</span>
+			</li>
+
+		</ul>
+		<input type="text" class="form-control" ng-model="item.name" ng-keyup="$event.keyCode == 13 && addItem()">
+		<button ng-click="addItem()" class="btn btn-raised btn-primary">Add Item</button>
+	</section>
+</main>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
+<script type="text/javascript">
+	$.material.init();
+	/**
+	*  Module
+	*
+	* Description
+	*/
+	var todo = angular.module('todoapp', 
+		[
+			'ngAnimate'
+		]);
+
+	todo.controller('itemCtrl', function($scope){
+		$scope.items = [];
+		$scope.addItem = function(){
+			$scope.items.push($scope.item);
+			$scope.item = {};
+		};
+
+		$scope.removeItem = function(index){
+			$scope.items.splice(index, 1);
+			// alert(index);
+		};
+	});
+
+</script>
+</body>
+</html>
